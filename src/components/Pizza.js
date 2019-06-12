@@ -1,12 +1,13 @@
 import React from "react"
 
-const Pizza = () => {
+const Pizza = ({pizza, pizzaFormShow}) => {
+
   return(
     <tr>
-      <td>{"Replace Me With Pizza Topping"}</td>
-      <td>{"Replace Me With Pizza Size"}</td>
-      <td>{"Replace Me With Vegatarian"}</td>
-      <td><button type="button" className="btn btn-primary">Edit Pizza</button></td>
+      <td>{pizza.topping}</td>
+      <td>{pizza.size} </td>
+      <td>{pizza.vegetarian ? "🌱" : "💔"}</td>
+      <td><button type="button" className="btn btn-primary" onClick={() => pizzaFormShow(pizza)}>Edit Pizza</button></td>
     </tr>
   )
 }
