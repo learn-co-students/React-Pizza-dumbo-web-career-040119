@@ -5,10 +5,11 @@ const PizzaForm = ({show, pizza, editPizza, saveChange}) => {
     return(
         <div className="form-row">
           <div className="col-5">
-              <input type="text" name="topping" className="form-control" placeholder="Pizza Topping" value={pizza.topping} onChange={saveChange}/>
+              <input type="text" name="topping" className="form-control" placeholder={pizza.topping} default={pizza.topping}
+              onChange={saveChange}/>
           </div>
           <div className="col">
-            <select value={pizza.size} className="form-control" name="size" onChange={saveChange}>
+            <select default={pizza.size} className="form-control" name="size" onChange={saveChange}>
               <option value="Small">Small</option>
               <option value="Medium">Medium</option>
               <option value="Large">Large</option>

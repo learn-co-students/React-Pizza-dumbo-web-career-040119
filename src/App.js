@@ -54,7 +54,6 @@ class App extends Component {
   }
 
   editPizza = (event, pizza) => {
-    console.log(event, pizza, this.state)
     return fetch(API + `/${pizza.id}`, {
       method: "PATCH",
       mode: 'cors',
@@ -67,17 +66,20 @@ class App extends Component {
       })
     })
     .then(res => res.json())
+    .then(updatedPizza => this.state.pizzas.map(pizza => {
+      if (pizza.id === updatedPizza.id) {
+        return updatedPizza
+      } else{
+          return pizza}
+    }))
     .then(this.setState({
       pizzaFormShow: false,
       pizzaToEdit: {},
       vegetarian: null,
       topping: "",
-      size: ""
+      size: "",
     }))
   }
-
-  // how to re-render after PATCH
-  // why doesn't it show my typing or remember
 
   render() {
     return (

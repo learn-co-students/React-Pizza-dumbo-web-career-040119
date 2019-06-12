@@ -2,15 +2,15 @@
   "pizzas": [
     {
       "id": 1,
-      "topping": "yyw",
-      "size": "",
+      "topping": "Hey",
+      "size": "Medium",
       "vegetarian": true
     },
     {
       "id": 2,
-      "topping": "Pepperoni",
-      "size": "Small",
-      "vegetarian": false
+      "topping": "dfsbfdgn",
+      "size": "",
+      "vegetarian": null
     },
     {
       "id": 3,
